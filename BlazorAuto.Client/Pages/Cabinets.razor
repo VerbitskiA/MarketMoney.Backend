@@ -1,0 +1,40 @@
+@page "/cabinets"
+@using MarketMoney.Domain.Cabinets.Queries
+@using MarketMoney.Domain.Common
+@using MediatR
+@inject IMediator Mediator
+@inject IDialogService DialogService
+
+<MudButton OnClick="OpenDialog" Variant="Variant.Filled" Color="Color.Success">New</MudButton>
+
+<MudTable Items="@_cabinets" Hover="true">
+    <HeaderContent>
+        <MudTh>Title</MudTh>
+        <MudTh>Marketplace</MudTh>
+        <MudTh>Active</MudTh>
+        <MudTh>Status</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Title">@context.Title</MudTd>
+        <MudTd DataLabel="Marketplace">@context.Marketplace</MudTd>
+        <MudTd DataLabel="IsActive">@context.IsActive</MudTd>
+        <MudTd DataLabel="Status">@context.CabinetStatus</MudTd>
+    </RowTemplate>
+</MudTable>
+
+@code {
+    
+    List<CabinetDto> _cabinets = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _cabinets = await Mediator.Send(new GetCabinetsForUserQuery(MmContstants.MockUserId));
+    }
+    
+    private void OpenDialog()
+    {
+        var s = "s";
+        
+        DialogService.Show<CreateCabinetDialog>("Options Dialog");
+    }
+}

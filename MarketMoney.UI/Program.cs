@@ -1,3 +1,5 @@
+using MarketMoney.Data.InMemory;
+using MarketMoney.Domain.Cabinets.Queries;
 using MarketMoney.UI.Components;
 using MudBlazor.Services;
 
@@ -5,10 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddMudServices();
-
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetCabinetsForUserQuery).Assembly));
+builder.Services.RegisterInMemoryDbAndRepositories();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

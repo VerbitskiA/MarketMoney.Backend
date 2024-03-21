@@ -1,0 +1,25 @@
+﻿@page "/"
+
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<MudTooltip Text="Delete">
+    <MudIconButton Icon="@Icons.Material.Filled.Delete" />
+</MudTooltip>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="@(() => Snackbar.Add("Simple Snackbar"))">
+    Open Snackbar
+</MudButton>
+<MudSelect T="string" Label="Coffee" AnchorOrigin="Origin.BottomCenter">
+    <MudSelectItem Value="@("Cappuccino")" />
+    <MudSelectItem Value="@("Cafe Latte")" />
+    <MudSelectItem Value="@("Espresso")" />
+</MudSelect>
+
+<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+    Open Simple Dialog
+</MudButton>
