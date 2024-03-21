@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketMoney.Web", "MarketMoney.Web\MarketMoney.Web.csproj", "{E52CCCB5-C3D2-416E-BFEC-DC780BED4CF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketMoney.Blazor", "MarketMoney.Blazor\MarketMoney.Blazor.csproj", "{2C901FC1-B1FC-4191-BB8E-AFC836C495DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{E52CCCB5-C3D2-416E-BFEC-DC780BED4CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E52CCCB5-C3D2-416E-BFEC-DC780BED4CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E52CCCB5-C3D2-416E-BFEC-DC780BED4CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C901FC1-B1FC-4191-BB8E-AFC836C495DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C901FC1-B1FC-4191-BB8E-AFC836C495DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C901FC1-B1FC-4191-BB8E-AFC836C495DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C901FC1-B1FC-4191-BB8E-AFC836C495DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
