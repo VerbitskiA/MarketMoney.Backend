@@ -1,4 +1,4 @@
-using MarketMoney.Frontend.Components;
+using MarketMoney.UI.Components;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
