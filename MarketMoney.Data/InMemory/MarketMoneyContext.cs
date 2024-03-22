@@ -38,7 +38,7 @@ public class MarketMoneyContext : DbContext
                 Id = Guid.NewGuid(),
                 Title = "Test cabinet",
                 ApiKey = "test-api-key",
-                CabinetStatus = CabinetStatus.ConnectionFailed,
+                ConnectionStatus = ConnectionStatus.ConnectionFailed,
                 IsActive = false,
                 Marketplace = Marketplace.Wildberries,
                 UserId = MmContstants.MockUserId

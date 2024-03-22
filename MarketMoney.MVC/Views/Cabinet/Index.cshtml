@@ -1,0 +1,39 @@
+@model List<MarketMoney.Domain.Cabinets.Queries.CabinetDto>
+
+@{
+    ViewBag.Title = "MarketMoney - Кабинеты";
+    Layout = "_Layout";
+}
+
+<h2>Кабинеты</h2>
+
+<p>
+  @Html.ActionLink("Создать новый", "Create", "Cabinet", "", new { @class = "btn btn-success"})
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Название</th>
+      <th scope="col">Маркетплейс</th>
+      <th scope="col">Статус</th>
+      <th scope="col">Посленее обновление данных</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>@item.Title</td>
+      <td>@item.Marketplace</td>
+      <td>@item.Status</td>
+      <td>@item.LastUpdate</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", "Cabinet", new { id = item.Id })
+        @Html.ActionLink("Details", "Details", "Cabinet", new { id = item.Id })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>

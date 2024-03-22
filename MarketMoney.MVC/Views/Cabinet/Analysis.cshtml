@@ -1,0 +1,33 @@
+@model MarketMoney.Domain.Analysis.Queries.OverallStatsDto
+
+@{
+    ViewBag.Title = "Аналитика";
+    Layout = "_Layout";
+}
+
+<h2>Аналитика</h2>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0" role="tab" aria-controls="simple-tabpanel-0" aria-selected="true">Общая</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab" aria-controls="simple-tabpanel-1" aria-selected="false">Продажи</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="simple-tab-2" data-bs-toggle="tab" href="#simple-tabpanel-2" role="tab" aria-controls="simple-tabpanel-2" aria-selected="false">Маркетинг</a>
+  </li>
+</ul>
+<div class="tab-content pt-5" id="tab-content">
+  <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
+    
+    <p>У вас всего @Model.TotalCabinets кабинетов.</p>
+    <p>Еще какая то статистика</p>
+  </div>
+  <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
+    <p>Визаулизация каких-то данных по продажам</p>
+  </div>
+  <div class="tab-pane" id="simple-tabpanel-2" role="tabpanel" aria-labelledby="simple-tab-2">
+    <p>Визаулизация каких-то данных по маркетингу</p>
+  </div>
+</div>

@@ -9,7 +9,9 @@ public class Cabinet
     public Marketplace Marketplace { get; set; }
     public bool IsActive { get; set; }
     public string ApiKey { get; set; }
-    public CabinetStatus CabinetStatus { get; set; }
+    public ConnectionStatus ConnectionStatus { get; set; }
+    
+    public DateTime CreatedAt { get; set; }
     
     public Guid UserId { get; set; }
     public User User { get; set; }

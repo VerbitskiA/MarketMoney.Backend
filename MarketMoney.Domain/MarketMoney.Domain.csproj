@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Marketplaces\Wildberries\Services\" />
       <Folder Include="Users\Commands\" />
       <Folder Include="Users\Queries\" />
     </ItemGroup>

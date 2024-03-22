@@ -20,20 +20,20 @@ public class GetCabinetsForUserHandler : IRequestHandler<GetCabinetsForUserQuery
 
         return cabs.Select(x => new CabinetDto
         {
-            Id = x.Id,
+            Id = x.Id.ToString(),
             Title = x.Title,
             Marketplace = x.Marketplace.ToString(),
-            IsActive = x.IsActive,
-            CabinetStatus = x.CabinetStatus.ToString()
+            Status = x.IsActive ? "Активный" : "Отключён",
+            LastUpdate = "Не загружались"
         }).ToList();
     }
 }
 
 public class CabinetDto
 {
-    public Guid Id { get; set; }
+    public string Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Marketplace { get; set; } = string.Empty;
-    public bool IsActive { get; set; }
-    public string CabinetStatus { get; set; } = string.Empty;
+    public string Status { get; set; } = string.Empty;
+    public string LastUpdate { get; set; } = string.Empty;
 }
