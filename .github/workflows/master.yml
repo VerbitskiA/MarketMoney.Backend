@@ -53,5 +53,5 @@ jobs:
 
             docker stop $CONTAINER_NAME || true && docker rm $CONTAINER_NAME || true
 
-            docker run -d --restart always --publish 5000:8080 --name $CONTAINER_NAME $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
+            docker run -d --restart always --publish 80:8080 --name $CONTAINER_NAME $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
       
